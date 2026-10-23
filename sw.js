@@ -1,4 +1,4 @@
-const CACHE="capability-atlas-shell-v13";
+const CACHE="capability-atlas-shell-v14";
 const SHELL=["./","./index.html","./styles.css","./assets.css","./scrollcraft.css","./scrollcraft.js","./atlas-editorial.css","./architecture-map.css","./app.js","./manifest.webmanifest","./data/capability-architecture.json"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));

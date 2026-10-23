@@ -1,0 +1,9 @@
+<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Icons_CurveClockwise" overflow="hidden"><style>
+.MsftOfcThm_Accent1_Fill_v2 {
+ fill:#86ED78; 
+}
+.MsftOfcThm_Accent1_Stroke_v2 {
+ stroke:#86ED78; 
+}
+</style>
+<path d="M77 82C77 82 53 74.5 53 32L67 32 43 8C43 7.7 19 32 19 32L32 32C32 32.1 35.7 72.6 77 82Z" class="MsftOfcThm_Accent1_Fill_v2 MsftOfcThm_Accent1_Stroke_v2" stroke="#86ED78" stroke-width="1.00017" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-opacity="1" fill="#86ED78" fill-opacity="1"/></svg>

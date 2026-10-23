@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-23T06:45:00Z",
+  "items": [
+    {
+      "source": "ServiceNow release notes · Brazil",
+      "title": "Brazil release notes: product features and changes",
+      "summary": "The current official release-notes index is for Brazil and links product-specific changes, including AI experiences, AI Agent Studio, AI Control Tower, App Engine, Integration Hub, CSM, HR Service Delivery, ITSM, ITOM, Security Operations and other product families. Open the relevant product page for details and availability.",
+      "url": "https://www.servicenow.com/docs/r/release-notes/new-features-changes.html",
+      "updated": "Brazil release documentation · checked 23 Oct 2026"
+    },
+    {
+      "source": "Now LLM model updates · Brazil",
+      "title": "October model changes: new models, retirements and replacements",
+      "summary": "The October 2026 update adds Gemma 4 26B-A4B for large and small use cases and Gemini 3.7 Flash for Build Agent only. Gemini 2.5 models and Claude Sonnet 4.5 were retired on October 8; Gemini 3.5 Flash and Claude Sonnet 4.6 are their replacements. ServiceNow V2 language models are deprecated for new development, with retirement planned for December. Verify your instance and configuration against the full notes.",
+      "url": "https://www.servicenow.com/docs/r/intelligent-experiences/servicenow-large-language-model-now-llm/now-llm-model-updates.html",
+      "updated": "23 Sep 2026 · October changes documented"
+    },
+    {
+      "source": "Build Agent release notes · Store",
+      "title": "Build Agent October release adds model and playbook support",
+      "summary": "The October 2026 Build Agent notes list Google Gemini 3.7 Flash support, additional metadata support for assessments, database views and sys wizard answers, regulated-market support for the ServiceNow Protected Platform, and expanded playbook capabilities. The full version history includes the detailed changes and compatibility information.",
+      "url": "https://www.servicenow.com/docs/r/store-release-notes/store-platcap-rn-build-agent-trial.html",
+      "updated": "8 Oct 2026"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+*.pptx
+source-deck.pdf
+media/source-deck.pdf
+*.emf
+*.tiff
+*.wdp
+*.mp4
+.agents/
+dist/
+__pycache__/

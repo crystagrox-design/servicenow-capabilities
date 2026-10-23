@@ -1,0 +1,44 @@
+name: Build and deploy capability atlas
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Rebuild from source deck when present
+        run: |
+          if [ -f source/servicenow-overview-and-interactive-capability-map.pptx ]; then
+            python scripts/build_atlas.py source/servicenow-overview-and-interactive-capability-map.pptx --out .
+          fi
+      - name: Refresh official ServiceNow documentation
+        run: python scripts/update_official_sources.py
+      - name: Assemble site output
+        run: |
+          mkdir -p dist
+          cp index.html *.css *.js manifest.webmanifest sw.js .nojekyll dist/
+          cp -R data dist/data
+          if [ -d media ]; then cp -R media dist/media; fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

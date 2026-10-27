@@ -62,7 +62,7 @@ function updateHighlights(){
   const visible=industry==="all"?workflowLanes.length:workflowLanes.filter(l=>l.industries.includes(industry)).length;
   $("#lensCount").textContent=industry==="all"?`${visible} connected lanes`:`${visible} lanes highlighted · full map remains visible`;
 }
-function capabilities(ids){return [...new Set(ids)].map(id=>details[id]||{name:id,url:"https://www.servicenow.com/docs/",desc:"Open the capability guide for its current overview and connected workflows."});}
+function capabilities(ids){return [...new Set(ids)].map(id=>({id,...(details[id]||{name:id,url:"https://www.servicenow.com/docs/",desc:"Open the capability guide for its current overview and connected workflows."})}));}
 function renderDetail(){
   const panel=$("#detailPanel");if(!selected.type){panel.innerHTML='<div class="detail-empty"><span class="detail-kicker">HOW TO EXPLORE</span><h3>Select a workstream or capability.</h3><p>Follow the connected stages, see which shared services support the path, and open a capability profile for deeper guidance.</p><ol><li>Choose an industry lens if useful.</li><li>Select a node in any workstream.</li><li>Review its role, context and related capabilities.</li></ol><a class="button secondary" href="index.html#map">Open the full capability map <span aria-hidden="true">↗</span></a></div>';return;}
   let title,tag,summary,path=[],relatedCaps=[],laneIds=[],sources=[];

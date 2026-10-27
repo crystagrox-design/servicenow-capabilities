@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#17164b" />
   <meta name="description" content="An interactive ServiceNow capability map showing connected enterprise workflows, data, AI and outcomes." />
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="workflow-map.css?v=map4" />
+  <link rel="stylesheet" href="workflow-map.css?v=map5" />
+  <link rel="stylesheet" href="workflow-map-enhancements.css?v=map5" />
   <title>Interactive Capability Map · ServiceNow Capability Atlas</title>
 </head>
 <body>
@@ -45,12 +46,13 @@
           </defs>
           <g class="board-decor" aria-hidden="true"><path d="M22 35H1578V870H22z"/><path d="M800 64v782M55 460h1490"/><circle cx="800" cy="460" r="186"/><circle cx="800" cy="460" r="218"/></g>
           <g id="pathLayer" class="path-layer" aria-hidden="true"></g>
-          <g class="platform-rail" aria-label="Shared platform foundation"><rect x="300" y="864" width="1000" height="36" rx="11"/><text x="800" y="888" text-anchor="middle">AI PLATFORM · CORE SERVICES · WORKFLOW DATA FABRIC · INTEGRATION · SECURITY &amp; TRUST</text></g>
+          <g id="relationLayer" class="relation-layer" aria-hidden="true"></g>
+          <g class="platform-rail" tabindex="0" role="img" aria-label="Shared platform foundation. AI Platform, data, workflows, Workflow Data Fabric, integration, security and trust support work across every capability area."><rect x="300" y="864" width="1000" height="36" rx="11"/><text x="800" y="888" text-anchor="middle">AI PLATFORM · DATA · WORKFLOWS · INTEGRATION · SECURITY &amp; TRUST</text></g>
           <g id="zoneLayer" class="zone-layer"></g>
-          <g id="centerCore" class="center-core" aria-label="Shared ServiceNow data and service core">
+          <g id="centerCore" class="center-core" tabindex="0" role="img" aria-label="Shared ServiceNow data and service core. The CMDB and Service Data Model relate assets, products, applications, services and their dependencies.">
             <circle class="core-halo" cx="800" cy="460" r="132"/><circle class="core-ring" cx="800" cy="460" r="108"/><circle class="core-face" cx="800" cy="460" r="97"/>
             <text class="core-kicker" x="800" y="402" text-anchor="middle">SHARED CONTEXT</text>
-            <text class="core-title" x="800" y="434" text-anchor="middle">CMDB +</text><text class="core-title" x="800" y="462" text-anchor="middle">Service Data Model</text>
+            <text class="core-title" x="800" y="434" text-anchor="middle">CMDB + Common</text><text class="core-title" x="800" y="462" text-anchor="middle">Service Data Model</text>
             <text class="core-copy" x="800" y="494" text-anchor="middle">Assets · products · applications</text><text class="core-copy" x="800" y="512" text-anchor="middle">services · relationships</text>
             <g class="core-spark" transform="translate(800 545)" aria-hidden="true"><circle r="5"/><path d="M0-19V-6M0 6V19M-19 0H-6M6 0H19M-13-13l9 9M4 4l9 9M13-13 4-4M-4 4l-9 9"/></g>
           </g>
@@ -59,14 +61,15 @@
       <div class="diagram-legend" aria-label="Diagram legend">
         <span><i class="legend-dot ai"></i>AI & agents</span><span><i class="legend-dot data"></i>Data & context</span><span><i class="legend-line workflow"></i>Workflows & integrations</span><span><i class="legend-dot trust"></i>Security & trust</span><span><i class="legend-line selected"></i>Selected connection</span>
       </div>
-      <div class="outcome-rail" aria-label="Shared business outcomes"><b>OUTCOMES</b><span>Business value</span><span>Resilient operations</span><span>Innovation</span><span>AI strategy</span></div>
+      <div class="outcome-rail" aria-label="Shared business outcomes"><b>OUTCOMES</b><span tabindex="0" aria-label="Business value: connect service work to measurable organizational priorities">Business value</span><span tabindex="0" aria-label="Resilient operations: reduce disruption and restore critical services">Resilient operations</span><span tabindex="0" aria-label="Innovation: build and improve digital workflows">Innovation</span><span tabindex="0" aria-label="AI strategy: apply governed AI to workflows with relevant enterprise context">AI strategy</span></div>
     </section>
     <section class="inspector" id="detailPanel" aria-live="polite" aria-label="Capability detail">
       <div class="inspector-empty"><span class="eyebrow">EXPLORE THE CONNECTIONS</span><h2>Select a capability node.</h2><p>Each node opens a detailed explanation and makes its related workflow path visible on the map.</p></div>
     </section>
     <p class="map-note">Capability connections are illustrative. They show common ways portfolios, platform services and data foundations can work together; they are not a required sequence or license bundle. Confirm current scope and availability with ServiceNow documentation.</p>
   </main>
-  <script src="workflow-map.js?v=map4"></script>
+  <div class="map-tooltip" id="mapTooltip" role="tooltip" hidden></div>
+  <script src="workflow-map.js?v=map5"></script>
   <script>if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));</script>
 </body>
 </html>

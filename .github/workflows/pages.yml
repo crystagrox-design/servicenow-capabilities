@@ -33,7 +33,7 @@ jobs:
       - name: Assemble site output
         run: |
           mkdir -p dist
-          cp index.html *.css *.js manifest.webmanifest sw.js .nojekyll dist/
+          cp *.html *.css *.js manifest.webmanifest sw.js .nojekyll dist/
           cp -R data dist/data
           if [ -d media ]; then cp -R media dist/media; fi
       - uses: actions/configure-pages@v5

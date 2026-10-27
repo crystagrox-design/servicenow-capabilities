@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071426" />
+  <meta name="description" content="An interactive map of connected ServiceNow enterprise workflows, shared platform services and business outcomes." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="workflow-map.css" />
+  <title>Enterprise Workflow Map · ServiceNow Capability Atlas</title>
+</head>
+<body>
+  <a class="skip-link" href="#workMap">Skip to the workflow map</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Back to ServiceNow capability guide"><span class="brand-mark">S</span><span><b>SERVICE NOW</b><small>CAPABILITY GUIDE</small></span></a>
+      <div class="breadcrumb">Enterprise workflow map</div>
+      <a class="back-link" href="index.html">Full capability guide <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CONNECTED ENTERPRISE · OPERATING MODEL</p>
+          <h1>See the work move<br /><em>across the enterprise.</em></h1>
+          <p class="hero-dek">Explore how strategy, employee services, IT operations, customer work, risk and delivery connect through a shared ServiceNow platform. Select any path to reveal its capabilities, data context, controls and outcomes.</p>
+          <div class="hero-actions"><a class="button primary" href="#workMap">Explore the connected map <span aria-hidden="true">↓</span></a><span class="hero-note">Illustrative capability relationships · not a required sequence or license bundle</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="signal signal-a">BUSINESS NEED</div><div class="signal signal-b">AI + DATA</div><div class="signal signal-c">CONNECTED WORK</div>
+          <div class="core-glow"><span>NOW</span><small>workflow<br />platform</small></div>
+          <svg class="hero-wires" viewBox="0 0 520 350" preserveAspectRatio="xMidYMid meet"><path d="M40 80 C140 80 125 172 260 172 S370 78 480 78"/><path d="M42 275 C142 275 135 177 260 177 S380 278 478 278"/><path d="M260 12V338"/></svg>
+        </div>
+      </section>
+
+      <section class="lens-section" aria-labelledby="lensTitle">
+        <div class="lens-head"><div><p class="eyebrow">OPTIONAL INDUSTRY LENS</p><h2 id="lensTitle">Focus the map around a sector.</h2><p>The full operating model stays visible. A lens highlights the lanes that commonly matter most in that context.</p></div><span class="lens-count" id="lensCount" aria-live="polite">9 connected lanes</span></div>
+        <div class="industry-lenses" id="industryLenses" role="group" aria-label="Highlight workflow lanes by industry"></div>
+      </section>
+
+      <section class="map-section" id="workMap" aria-labelledby="mapTitle">
+        <div class="section-heading"><div><p class="eyebrow">INTERACTIVE WORK ARCHITECTURE</p><h2 id="mapTitle">From business signal to measurable outcome.</h2><p>Each row is an example workstream. Follow its path across capabilities, then use the shared backbone to see how data, workflow, AI and trust services support multiple lanes.</p></div><button class="button secondary" id="resetMap" type="button">Show full map <span aria-hidden="true">↺</span></button></div>
+        <div class="map-layout">
+          <div class="map-column">
+            <div class="map-legend" aria-hidden="true"><span>WORKSTREAM</span><span>NEED / SIGNAL</span><span>PORTFOLIO</span><span>CONNECTED EXECUTION</span><span>OUTCOME</span></div>
+            <div class="workflow-map" id="workflowMap" aria-label="Connected workflow lanes"></div>
+            <section class="backbone" aria-labelledby="backboneTitle">
+              <div class="backbone-heading"><div><p class="eyebrow">CROSS-CUTTING SERVICES</p><h3 id="backboneTitle">One shared platform backbone.</h3><p>These capabilities are reused wherever they fit; the tiles are not additional mandatory steps.</p></div><span class="backbone-wire" aria-hidden="true"></span></div>
+              <div class="backbone-grid" id="backboneGrid"></div>
+            </section>
+            <section class="outcomes" aria-labelledby="outcomesTitle"><p class="eyebrow">BUSINESS VALUE</p><h3 id="outcomesTitle">What connected work makes possible</h3><div class="outcome-grid" id="outcomeGrid"></div></section>
+          </div>
+          <aside class="detail-panel" id="detailPanel" aria-live="polite" aria-label="Selected workflow details">
+            <div class="detail-empty"><span class="detail-kicker">HOW TO EXPLORE</span><h3>Select a workstream or capability.</h3><p>Follow the connected stages, see which shared services support the path, and open a capability profile for deeper guidance.</p><ol><li>Choose an industry lens if useful.</li><li>Select a node in any workstream.</li><li>Review its role, context and related capabilities.</li></ol><a class="button secondary" href="index.html#map">Open the full capability map <span aria-hidden="true">↗</span></a></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="method-section"><p class="eyebrow">HOW TO READ THIS VIEW</p><h2>Connections show context, not a prescribed implementation.</h2><p>ServiceNow portfolios and platform services can be combined in different ways. The links here organize examples from the capability guide into understandable work patterns; actual architecture, availability and licensing depend on the organization’s design and current product guidance.</p><div class="method-links"><a href="index.html#capabilities">Browse capability profiles ↗</a><a href="https://www.servicenow.com/docs/" target="_blank" rel="noopener">ServiceNow documentation ↗</a></div></section>
+    </main>
+    <footer class="footer"><a class="brand-mini" href="index.html"><span class="brand-mark">S</span><span><b>CAPABILITY ATLAS</b><small>ServiceNow capability guide</small></span></a><p>Internal learning aid. Product availability, licensing, model support and roadmap details can change. Confirm against current ServiceNow documentation.</p><a href="#top">Back to top ↑</a></footer>
+  </div>
+  <script src="workflow-map.js"></script>
+  <script>if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));</script>
+</body>
+</html>
